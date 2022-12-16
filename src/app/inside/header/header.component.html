@@ -1,0 +1,51 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<header class="bg-blue-500">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+    <div
+      class="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none"
+    >
+      <div class="flex items-center">
+        <img
+          class="h-10 w-auto"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg"
+          alt=""
+        />
+        <div class="hidden ml-10 space-x-8 lg:block">
+          <a
+            routerLink="/app"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="text-base font-medium text-white hover:text-indigo-500"
+          >
+            Mis Votaciones
+          </a>
+          <a
+            routerLink="/app/voting"
+            routerLinkActive="active-link"
+            class="text-base font-medium text-white hover:text-indigo-500"
+          >
+            Lista de votaciones
+          </a>
+        </div>
+      </div>
+      <div class="ml-10 space-x-4">
+        <button
+          (click)="signOut()"
+          class="inline-block bg-blue-700 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
+        >
+          Cerrar sesión
+        </button>
+      </div>
+    </div>
+    <div class="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
+      <a routerLink="/app" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+        class="text-base font-medium text-white hover:text-indigo-50">
+        Mis Votaciones
+      </a>
+      <a routerLink="/app/voting" routerLinkActive="active-link"
+        class="text-base font-medium text-white hover:text-indigo-50">
+        Lista de Votaciones
+      </a>
+    </div>
+  </nav>
+</header>
